@@ -1,0 +1,16 @@
+﻿@using Schnap.Domain.Entities
+@model IEnumerable<Picture>
+
+@{
+    ViewBag.Title = "Pictures";
+}
+
+@foreach (var picture in Model)
+{
+    <div>
+        <h3>@picture.picture_id</h3>
+        <h4>@picture.title</h4>
+        @picture.description
+    </div>
+}
+
