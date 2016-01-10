@@ -9,6 +9,6 @@ namespace Schnap.Domain.Abstract
 {
     public interface IPictureRepository
     {
-        IEnumerable<Picture> pictures;
+        IEnumerable<Picture> pictures { get; }
     }
 }
