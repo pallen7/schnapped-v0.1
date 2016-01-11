@@ -1,8 +1,4 @@
 ﻿using Schnap.Domain.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Schnap.Client.Controllers
@@ -18,7 +14,7 @@ namespace Schnap.Client.Controllers
 
         public ActionResult List()
         {
-            return View(picture_repository.pictures);
+            return View(picture_repository.Get());
         }
     }
 }
