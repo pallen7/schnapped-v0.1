@@ -1,4 +1,5 @@
-﻿using Schnap.Domain.Persistence.Abstract;
+﻿using Schnap.Client.Models;
+using Schnap.Domain.Persistence.Abstract;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -22,6 +23,8 @@ namespace Schnap.Client.Controllers
             // Add tests to this kind of logic at the infrastructure layer with a combo of:
             // https://ludwigstuyck.wordpress.com/2013/03/05/a-reference-architecture-part-7/
             // https://msdn.microsoft.com/en-gb/data/dn314429.aspx
+            // Need to also think about how/where to calculate the paging info/links. Straight from MVC book at the moment.
+            // Love the idea of HTML Helpers though...
             var all_pictures = picture_repository.Get();
 
             var view_pictures = all_pictures
@@ -30,7 +33,20 @@ namespace Schnap.Client.Controllers
                             .Take(page_size)
                             ;
 
-            return View(picture_repository.Get());
+            var paging_info = new PagingInfo
+            {
+                current_page = page,
+                items_per_page = page_size,
+                total_items = all_pictures.Count()
+            };
+
+            var model = new PictureListViewModel
+            {
+                pictures = view_pictures,
+                paging_info = paging_info
+            };
+
+            return View(model);
         }
     }
 }

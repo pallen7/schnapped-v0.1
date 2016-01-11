@@ -1,11 +1,10 @@
-﻿@using Schnap.Domain.Persistence.Entities
-@model IEnumerable<Picture>
+﻿@model Schnap.Client.Models.PictureListViewModel
 
 @{
     ViewBag.Title = "Pictures";
 }
 
-@foreach (var picture in Model)
+@foreach (var picture in Model.pictures)
 {
     <div>
         <h3>@picture.id</h3>
@@ -13,4 +12,8 @@
         @picture.description
     </div>
 }
+<div>
+    @Html.PageLinks(Model.paging_info, x => Url.Action("List", new { Page = x }))
+</div>
+
 
