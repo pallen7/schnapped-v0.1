@@ -1,6 +1,6 @@
 ﻿using Ninject;
-using Schnap.Domain.Abstract;
-using Schnap.Domain.Concrete;
+using Schnap.Domain.Persistence.Abstract;
+using Schnap.Domain.Persistence.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -30,6 +30,7 @@ namespace Schnap.Client.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IPictureRepository>().To<PictureRepository>();
+            kernel.Bind<EFDbContext>().ToSelf();
         }
     }
 }

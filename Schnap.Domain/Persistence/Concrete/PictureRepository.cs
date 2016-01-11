@@ -1,13 +1,14 @@
-﻿using Schnap.Domain.Abstract;
-using Schnap.Domain.Entities;
+﻿using Schnap.Domain.Persistence.Abstract;
+using Schnap.Domain.Persistence.Entities;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
-namespace Schnap.Domain.Concrete
+namespace Schnap.Domain.Persistence.Concrete
 {
     public class PictureRepository : IPictureRepository
     {
+
         EFDbContext context = new EFDbContext();
 
         public IEnumerable<Picture> Get()

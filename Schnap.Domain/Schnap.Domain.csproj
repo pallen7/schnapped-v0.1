@@ -74,11 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IPictureRepository.cs" />
-    <Compile Include="Concrete\EFDbContext.cs" />
-    <Compile Include="Concrete\PictureRepository.cs" />
-    <Compile Include="Entities\Picture.cs" />
-    <Compile Include="Persistence\EFPictureContext.cs" />
+    <Compile Include="Persistence\Abstract\IPictureRepository.cs" />
+    <Compile Include="Persistence\EFDbContext.cs" />
+    <Compile Include="Persistence\Concrete\PictureRepository.cs" />
+    <Compile Include="Persistence\Entities\Picture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

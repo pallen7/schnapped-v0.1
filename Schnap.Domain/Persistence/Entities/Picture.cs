@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Schnap.Domain.Entities
+namespace Schnap.Domain.Persistence.Entities
 {
     public class Picture
     {

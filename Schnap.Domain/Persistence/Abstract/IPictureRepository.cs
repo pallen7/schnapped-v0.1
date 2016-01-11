@@ -1,7 +1,7 @@
-﻿using Schnap.Domain.Entities;
+﻿using Schnap.Domain.Persistence.Entities;
 using System.Collections.Generic;
 
-namespace Schnap.Domain.Abstract
+namespace Schnap.Domain.Persistence.Abstract
 {
     public interface IPictureRepository
     {

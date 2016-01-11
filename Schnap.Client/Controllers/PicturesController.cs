@@ -1,4 +1,4 @@
-﻿using Schnap.Domain.Abstract;
+﻿using Schnap.Domain.Persistence.Abstract;
 using System.Web.Mvc;
 
 namespace Schnap.Client.Controllers

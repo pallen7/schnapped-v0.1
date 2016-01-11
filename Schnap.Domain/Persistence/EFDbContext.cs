@@ -1,7 +1,7 @@
-﻿using Schnap.Domain.Entities;
+﻿using Schnap.Domain.Persistence.Entities;
 using System.Data.Entity;
 
-namespace Schnap.Domain.Concrete
+namespace Schnap.Domain.Persistence.Concrete
 {
     public class EFDbContext : DbContext
     {
