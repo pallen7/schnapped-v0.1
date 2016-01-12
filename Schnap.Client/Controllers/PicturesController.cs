@@ -16,7 +16,7 @@ namespace Schnap.Client.Controllers
 
         public ActionResult List(int page=1)
         {
-            int page_size = 4;
+            int page_size = 3;
 
             // Move this out of the controller and into a 'Query' layer
             // Shouldn't have any notion of repositories in the controllers
